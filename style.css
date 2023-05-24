@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --darkWhiteBcg: #fafafa;
+  --textColor1: #0162c8;
+  --textColor2: #7d62f2;
+
+  --mainGradient: linear-gradient(
+    to left bottom,
+    #7d62f2,
+    #7f65ee,
+    #8168ea,
+    #836ae6,
+    #856de2,
+    #8a6cdc,
+    #8f6bd6,
+    #936ad0,
+    #9a65c7,
+    #9f60be,
+    #a45bb5,
+    #a757ac
+  );
+
+  --secondary: linear-gradient(
+    to right bottom,
+    #fd4d3e,
+    #fe315c,
+    #f61a7a,
+    #e51b97,
+    #c830b3
+  );
+
+  --shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+}
+
+body {
+  background-color: steelblue;
+  color: var(--darkWhiteBcg);
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  overflow: hidden;
+  margin: 10rem;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+/* BTN STUUUF */
+
+.button_form {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: lightblue;
+  font-family: inherit;
+  padding: 1.5rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: 0;
+}
+
+.button_form:focus {
+  outline: 0;
+}
+
+.button_form:hover {
+  background-color: steelblue;
+}
+
+.button_form:active {
+  transform: scale(0.96);
+}
+
+.form_control {
+  position: relative;
+  margin: 2rem 0 4rem;
+  width: 30rem;
+}
+
+.text_form {
+  margin-top: 2rem;
+}
+
+/* Form control */
+
+.form_control input {
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  color: var(--darkWhiteBcg);
+}
+
+.form_control input:focus,
+.form_control input:valid {
+  outline: 0;
+}
+
+.form_control label {
+  position: absolute;
+  left: 0;
+}
+
+/* Bouncing letters XD */
+
+.form_control label span {
+  display: inline-block;
+  font-size: 1.4rem;
+  min-width: 0.5rem;
+  transition: 0.4s cubic-bezier(0.6, -0.55, 0.25, 1.55);
+}
+
+.form_control input:focus + label span,
+.form_control input:focus + label span {
+  color: lightblue;
+  transform: translateY(-6rem);
+}
